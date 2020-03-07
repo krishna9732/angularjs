@@ -14,7 +14,7 @@ export class AppComponent {
   }
   @HostListener('click',['$event'])
   mousehover(event:Event)
-  {
+  { 
     alert("hello");
   }
 }

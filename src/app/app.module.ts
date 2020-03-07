@@ -14,7 +14,7 @@ import {MyserviceService} from './myservice.service';
   imports: [
     BrowserModule,
     AppRoutingModule
-  ],
+  ], 
   providers: [MyserviceService],
   bootstrap: [AppComponent]
 })
