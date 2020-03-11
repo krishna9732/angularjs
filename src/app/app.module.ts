@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExcelComponent } from './excel/excel.component';
 import {MyserviceService} from './myservice.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExcelComponent
+    ExcelComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,6 @@ import {MyserviceService} from './myservice.service';
 })
 export class AppModule {
   constructor(){
-    console.log("hello, this is a module");
+    // console.log("hello, this is a module");
   }
  }

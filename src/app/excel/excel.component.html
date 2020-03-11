@@ -1,1 +1,18 @@
-<p>excel works!</p>
+<!-- <h1>root component</h1>
+<hr>
+<div *ngIf="checkngIF">
+    this is angular
+</div>
+<button (click)="btnclick()">Click me</button>
+<p [ngStyle]="{'color':'blue','font-weight':'bold'}" >This is ng style example</p> -->
+<div class="page-area">
+    <h1>component Lifecycle</h1>
+    <input type="text" placeholder="input here........." #val>
+    <button (click)="submitValue(val)">click me </button>
+    <app-about [myvalue]="value"> ngContent:{{value}} </app-about>
+    
+</div>
+ 
+
+
+
