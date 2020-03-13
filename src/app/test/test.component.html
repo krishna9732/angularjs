@@ -1,0 +1,68 @@
+<h1> In this page we complete ngIF, else, then, ngSwitch</h1>
+
+<h2>using switch</h2>
+<select (change)="setvalue($event)">
+    <option value="">.............select..........</option>
+    <option value="one">ONE</option>
+    <option value="two">TWO</option>
+    <option value="three">THREE</option>
+    <option value="another">another</option>
+</select>
+<div [ngSwitch]="choose">
+    <h3 *ngSwitchCase="'one'">First</h3>
+    <h3 *ngSwitchCase="'two'">Second</h3>
+    <h3 *ngSwitchCase="'three'">Third</h3>
+    <h3 *ngSwitchDefault>Default</h3>
+
+</div>
+ 
+ 
+ 
+ 
+ <!-- <h1>welcome to {{title}}!</h1> -->
+ <!--
+    use thenblock 
+    
+    <h2>Using ngIF with else</h2>
+ <input type="radio" name="radio1" (click)="changevalue(true)">True
+ <input type="radio" name="radio1" (click)="changevalue(false)">False
+ <div *ngIf="isvalid; then thenblock; else block"></div>
+     <ng-template #thenblock>
+         <div>
+         This is valid data using else  and then block
+         </div>
+ 
+     </ng-template>
+   
+
+<ng-template #block>
+    <div >
+        This is not valid data using else
+    </div>
+</ng-template> -->
+
+
+<!-- 
+    This is by using if and else 
+<div *ngIf="isvalid; else block">
+    This is valid data using else
+</div>
+<ng-template #block>
+    <div >
+        This is not valid data using else
+    </div>
+</ng-template> -->
+
+
+
+
+
+
+<!--
+    this is usig on if condition
+    <div *ngIf="isvalid">
+        This is valid data 
+</div>
+<div *ngIf="!isvalid">
+    This is not valid data 
+</div> -->

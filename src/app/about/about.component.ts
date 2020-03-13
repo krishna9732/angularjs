@@ -36,6 +36,7 @@ ngAfterViewInit(){
   console.log("ngAfterViewInit called")
 }
 ngAfterViewChecked(){
-  console.log("ngAfterViewChecked called")     
+  console.log("ngAfterViewChecked called")
+}
 
 }
