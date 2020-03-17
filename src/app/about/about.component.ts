@@ -11,7 +11,7 @@ AfterViewInit, AfterViewChecked{
   constructor() {
     console.log("constructor called");
    }
-  @Input() myvalue="edf"
+  @Input() myvalue="dddddd"
 
   ngOnChanges(changes:SimpleChanges){
    // console.log("ngOnChanges called");

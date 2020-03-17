@@ -1,0 +1,35 @@
+<h1 [ngStyle]="{'color':'blue'}">{{title}}</h1>
+
+<!-- <p *ngFor="let employee of employees">
+    *ngIf(employee.gender=="male")
+    return "M";
+    else
+    return "F";
+</p> -->
+
+<table border="1" >
+    <th>CODE</th>
+    <th>NAME</th>
+    <th>GENDER</th>
+    <th>SALARY</th>
+    <tr *ngFor="let employee of employees">
+        
+        <td>{{employee.code}}</td>
+        <td>{{employee.name | uppercase | mypipe:employee.gender}}</td>
+        <td >
+            <tr *ngIf="employee.gender=='male' return 'M'">
+                M
+            </tr>
+            <tr *ngIf="employee.gender=='female'">
+                F
+            </tr>
+        </td>
+        <td>{{employee.salary | currency:"INR"}}</td>
+
+    </tr>
+    <!--*ngIf="employee.gender=='male'" <tr *ngIf="employee.gender=='male'">
+ return "M"
+    </tr> -->
+
+</table>
+

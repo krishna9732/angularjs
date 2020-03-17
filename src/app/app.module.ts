@@ -14,6 +14,9 @@ import { NgclassuseComponent } from './ngclassuse/ngclassuse.component';
 import { AtribindingComponent } from './atribinding/atribinding.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { MypipePipe } from './mypipe.pipe';
+import { CustompipeComponent } from './custompipe/custompipe.component';
+import { UseroutingComponent } from './userouting/userouting.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { PipesComponent } from './pipes/pipes.component';
     NgclassuseComponent,
     AtribindingComponent,
     TwowaybindingComponent,
-    PipesComponent
+    PipesComponent,
+    MypipePipe,
+    CustompipeComponent,
+    UseroutingComponent
   ],
   imports: [
     BrowserModule,
