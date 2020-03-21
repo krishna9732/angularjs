@@ -1,0 +1,16 @@
+<h1 [ngStyle]="{'color':'blue'}">{{title}}</h1>
+<h2>{{text}}</h2><br>
+<!-- <div *ngFor="let empl of emp">
+<p>Employees detail {{empl.empcode}} + {{empl.name}}</p>
+</div> -->
+<table border="1"  class="container">
+    <th>Employees Code</th>
+    <th>Name</th>
+    <th>Desig   </th>
+    <tr  *ngFor="let empl of emp">
+        <td>{{empl.empcode}}</td>
+        <td>{{empl.name }}</td>
+        <td>{{empl.post}}</td>
+    </tr>
+
+</table>

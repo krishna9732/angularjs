@@ -10,11 +10,29 @@ import { NgclassuseComponent } from './ngclassuse/ngclassuse.component';
 import { NgclassComponent } from './ngstyle/ngclass.component';
 import { TestComponent } from './test/test.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
+import { UseroutingComponent } from './userouting/userouting.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MessageComponent } from './message/message.component';
+import { FormsComponent } from './forms/forms.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 
 const routes: Routes = [
   {
-    path:'pipes',component:PipesComponent
+    path:'',redirectTo:'Dashboard', pathMatch:'full'
+  },
+  {
+    path:'pipes',
+    children:[
+      {path:'',component:PipesComponent},
+   
+    {
+      path:'atribinding',component:AtribindingComponent
+    },
+  ]
+  },
+  {
+    path:'atribinding',component:AtribindingComponent
   },
   {
     path:'custopipe', component:CustompipeComponent
@@ -22,9 +40,7 @@ const routes: Routes = [
   {
     path:'about',component:AboutComponent
   },
-  {
-    path:'atribing',component:AtribindingComponent
-  },
+  
   {
     path:'excel',component:ExcelComponent
   },
@@ -42,6 +58,21 @@ const routes: Routes = [
   },
   {
     path:'twowaybinding',component:TwowaybindingComponent
+  },
+  {
+    path:'Dashboard',component:UseroutingComponent
+  },
+  {
+    path:'message',component:MessageComponent
+  },
+  {
+    path:'forms',component:FormsComponent
+  },
+  {
+    path:'rectforms',component:ReactiveformComponent
+  },
+  {
+    path:'**',component:PagenotfoundComponent
   }
 ];
 

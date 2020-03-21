@@ -1,6 +1,7 @@
 <h1>{{title}}</h1>
-
+<div  class="container">
 enter your name: <input [value]='Data' (input)='Data=$event.target.value'><br>
 your name:{{Data}}<br>
 <input [(ngModel)]='Data1'><br>
 Entered value:{{'   '+ Data1}}
+</div>
