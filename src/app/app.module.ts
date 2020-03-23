@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +26,10 @@ import { MessageService } from './message.service';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { from } from 'rxjs';
+import { AngularcrudComponent } from './angularcrud/angularcrud.component';
+import { EmployeesModule } from './angularcrud/modules/employees/employees.module';
+import { EmployeeComponent } from './angularcrud/modules/employees/employee/employee.component';
+import { EmployeelistComponent } from './angularcrud/modules/employees/employeelist/employeelist.component';
 
 @NgModule({
   declarations: [
@@ -43,14 +49,19 @@ import { from } from 'rxjs';
     PagenotfoundComponent,
     MessageComponent,
     FormsComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    AngularcrudComponent,
+    EmployeeComponent,
+    EmployeelistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-  ], 
+    ReactiveFormsModule,
+    EmployeesModule,
+    HttpClientModule
+    ], 
   providers: [MyserviceService,MessageService],
   bootstrap: [AppComponent]
 })

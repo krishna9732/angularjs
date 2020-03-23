@@ -47,6 +47,9 @@ export class UseroutingComponent implements OnInit {
   rectforms(){
     this.router.navigate(['./rectforms'])
   }
+  angularcrud(){
+    this.router.navigate(['./angularcrud'])
+  }
   ngOnInit(): void {
   }
 

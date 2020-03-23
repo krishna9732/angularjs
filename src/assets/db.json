@@ -1,0 +1,36 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "firstname": "krishna",
+      "Lastname": "Jana",
+      "Email": "krishna@gmail.com",
+      "Mobile": 82157984,
+      "Gender": "Male"
+    },
+    {
+      "id": 2,
+      "firstname": "Avinash",
+      "Lastname": "Singh",
+      "Email": "avi@gmail.com",
+      "Mobile": 923587455,
+      "Gender": "Male"
+    },
+    {
+      "firstname": "sruti",
+      "Lastname": "singh",
+      "Email": "sruti@gmail.com",
+      "id": 4,
+      "Mobile": "87914541133",
+      "Gender": "Female"
+    },
+    {
+      "firstname": "Vikash kumar ",
+      "Lastname": "Sharma",
+      "Email": "vikash@gmail.com",
+      "id": 5,
+      "Mobile": "9732580285",
+      "Gender": "Male"
+    }
+  ]
+}

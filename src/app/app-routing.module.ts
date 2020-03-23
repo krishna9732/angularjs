@@ -15,6 +15,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MessageComponent } from './message/message.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { AngularcrudComponent } from './angularcrud/angularcrud.component';
 
 
 const routes: Routes = [
@@ -70,6 +71,9 @@ const routes: Routes = [
   },
   {
     path:'rectforms',component:ReactiveformComponent
+  },
+  {
+    path:'angularcrud',component:AngularcrudComponent
   },
   {
     path:'**',component:PagenotfoundComponent
