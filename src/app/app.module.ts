@@ -3,66 +3,77 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar'; 
+import {DishService} from './services/dish.service'
+import {PromotionService} from './services/promotion.service';
+import {AppRoutingModule} from './app-routing/app-routing.module';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
-import { AppRoutingModule } from './app-routing.module';
+// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExcelComponent } from './excel/excel.component';
-import {MyserviceService} from './myservice.service';
-import { AboutComponent } from './about/about.component';
-import { TestComponent } from './test/test.component';
-import { NgclassComponent } from './ngstyle/ngclass.component';
-import { GroupingComponent } from './grouping/grouping.component';
-import { NgclassuseComponent } from './ngclassuse/ngclassuse.component';
-import { AtribindingComponent } from './atribinding/atribinding.component';
-import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
-import { PipesComponent } from './pipes/pipes.component';
-import { MypipePipe } from './mypipe.pipe';
-import { CustompipeComponent } from './custompipe/custompipe.component';
-import { UseroutingComponent } from './userouting/userouting.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { MessageComponent } from './message/message.component';
-import { MessageService } from './message.service';
-import { FormsComponent } from './forms/forms.component';
-import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { MenuComponent } from './menu/menu.component';
 import { from } from 'rxjs';
-import { AngularcrudComponent } from './angularcrud/angularcrud.component';
-import { EmployeesModule } from './angularcrud/modules/employees/employees.module';
-import { EmployeeComponent } from './angularcrud/modules/employees/employee/employee.component';
-import { EmployeelistComponent } from './angularcrud/modules/employees/employeelist/employeelist.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { LeaderService } from './services/leader.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExcelComponent,
+    DishdetailComponent,
+    MenuComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
     AboutComponent,
-    TestComponent,
-    NgclassComponent,
-    GroupingComponent,
-    NgclassuseComponent,
-    AtribindingComponent,
-    TwowaybindingComponent,
-    PipesComponent,
-    MypipePipe,
-    CustompipeComponent,
-    UseroutingComponent,
-    PagenotfoundComponent,
-    MessageComponent,
-    FormsComponent,
-    ReactiveformComponent,
-    AngularcrudComponent,
-    EmployeeComponent,
-    EmployeelistComponent
+    ContactComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    EmployeesModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule,
+    FlexLayoutModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatSlideToggleModule
+
+
     ], 
-  providers: [MyserviceService,MessageService],
+  providers: [DishService,PromotionService,LeaderService],
+  entryComponents: [
+    LoginComponent
+],
   bootstrap: [AppComponent]
 })
 export class AppModule {

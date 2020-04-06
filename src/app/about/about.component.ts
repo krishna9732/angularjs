@@ -1,42 +1,23 @@
-import { Component, OnInit,Input, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Leader} from '../shared/leader';
+import {LeaderService} from '../services/leader.service';
+import { Params, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked,
-AfterViewInit, AfterViewChecked{
+export class AboutComponent implements OnInit {
 
-  constructor() {
-    console.log("constructor called");
-   }
-  @Input() myvalue="dddddd"
+  leaders:Leader[];
 
-  ngOnChanges(changes:SimpleChanges){
-   // console.log("ngOnChanges called");
-console.log("ngOnChanges Input value  = " + changes.myvalue.currentValue)
-  }
-  
+  constructor( private leaderService:LeaderService,
+    private route: ActivatedRoute) { }
+
   ngOnInit(): void {
-    console.log("ngOnInit called");
-
+   this.leaders = this.leaderService.getLeaders();
   }
-
-  ngDoCheck(){
-    console.log("ngDocheck called")
-  }
-ngAfterContentInit(){
-  console.log("ngAfterContentInit called")
-}
-ngAfterContentChecked(){
-  console.log("ngAfterContentChecked called" )
-}
-ngAfterViewInit(){
-  console.log("ngAfterViewInit called")
-}
-ngAfterViewChecked(){
-  console.log("ngAfterViewChecked called")
-}
 
 }

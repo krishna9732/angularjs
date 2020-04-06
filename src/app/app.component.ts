@@ -2,7 +2,7 @@ import { Component, Input,HostListener, Inject} from '@angular/core';
 // import {MyserviceService} from './myservice.service';
 import {Router} from '@angular/router';
 import { FormGroup,FormControl,FormBuilder,NgForm} from '@angular/forms';
-import {MessageService} from './message.service';
+// import {MessageService} from './message.service';
 import { from } from 'rxjs';
 
 
